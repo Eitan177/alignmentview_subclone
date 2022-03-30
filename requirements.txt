@@ -12,6 +12,6 @@ zlib
 gzip
 shutil
 itertools
-import re
-import sys
-import time
+re
+sys
+time
