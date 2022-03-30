@@ -2,7 +2,6 @@ numpy
 bokeh
 scipy
 sklearn
-itertools
 matplotlib
 pdb
 bio
