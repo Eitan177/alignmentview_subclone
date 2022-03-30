@@ -4,9 +4,5 @@ scipy
 sklearn
 matplotlib
 bio
-collections
-base64
-zlib
-gzip
-shutil
+
 
