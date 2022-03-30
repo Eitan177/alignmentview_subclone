@@ -11,7 +11,4 @@ base64
 zlib
 gzip
 shutil
-itertools
-re
-sys
-time
+
