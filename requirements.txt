@@ -3,7 +3,6 @@ bokeh
 scipy
 sklearn
 matplotlib
-pdb
 bio
 collections
 base64
