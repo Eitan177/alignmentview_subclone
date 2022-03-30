@@ -189,8 +189,8 @@ def view_alignment(aln, useconsensus,fr=1,fontsize="9pt", plot_width=750,see_seq
     st.write(str(sum(counts)))
     seqs_for_view = np.repeat(seqs,countsforlink) 
     ## 03/26
-    ##incrementforview = int(np.round(seqs_for_view.shape[0]/1000))
-    incrementforview = 1
+    incrementforview = int(np.round(seqs_for_view.shape[0]/1000))
+    ##incrementforview = 1
     ## 03/26
 
     if incrementforview > 1:
@@ -199,6 +199,7 @@ def view_alignment(aln, useconsensus,fr=1,fontsize="9pt", plot_width=750,see_seq
       indsview=np.sort(np.unique(indsview))
       seqs_for_view =seqs_for_view[indsview]
       uniqtocolors = uniqtocolors[indsview]
+      justsubc_tocolors = justsubc_tocolors[indsview]
     
     colors_for_view=np.flip(uniqtocolors,axis=1).ravel().tolist()
     just_subc_colors_for_view = np.flip(justsubc_tocolors,axis=1).ravel().tolist()
@@ -269,7 +270,11 @@ def view_alignment(aln, useconsensus,fr=1,fontsize="9pt", plot_width=750,see_seq
 
     p2.add_glyph(source, glyph)
     p2.add_glyph(source, rects)
-
+    
+    p2.grid.visible = False
+    p2.xaxis.major_label_text_font_style = "bold"
+    p2.yaxis.minor_tick_line_width = 0
+    p2.yaxis.major_tick_line_width = 0
 
     p1.add_glyph(subc_source, glyph2)
     p1.add_glyph(subc_source, rects2)
